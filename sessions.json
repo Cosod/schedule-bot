@@ -1,0 +1,54 @@
+{
+  "sessions": [
+    {
+      "id": "6224952454:6224952454",
+      "data": {
+        "monday": false,
+        "tuesday": false,
+        "all": true,
+        "wednsday": false,
+        "thursday": false,
+        "friday": false,
+        "saturday": false,
+        "wednesday": false
+      }
+    },
+    {
+      "id": "5348909524:5348909524",
+      "data": {
+        "monday": false,
+        "tuesday": false,
+        "wednsday": false,
+        "thursday": false,
+        "friday": false,
+        "saturday": false,
+        "all": true,
+        "wednesday": false
+      }
+    },
+    {
+      "id": "-4060218487:6224952454",
+      "data": {
+        "monday": false,
+        "tuesday": false,
+        "wednesday": false,
+        "thursday": false,
+        "friday": false,
+        "saturday": false,
+        "all": true
+      }
+    },
+    {
+      "id": "-4060218487:5348909524",
+      "data": {
+        "monday": false,
+        "tuesday": false,
+        "wednesday": false,
+        "thursday": false,
+        "friday": false,
+        "saturday": false,
+        "all": true
+      }
+    }
+  ]
+}
