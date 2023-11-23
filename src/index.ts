@@ -6,9 +6,10 @@ import EventEmitter = require("events");
 import { ScheduletCommand } from "./commands/schedule.command";
 import { Command } from "./commands/command.class";
 import { SpamCommand } from "./commands/spam.command";
-import { Browser } from "./components/browser/browser";
-import { Parser } from "./components/parser/parser";
+import { Browser } from "./components/browser/browser.class";
+import { Parser } from "./components/parser/parser.class";
 import { Schedule } from "./components/schedule/schedule.class";
+import { StartCommand } from "./commands/start.command";
 
 const LocalSession = require("telegraf-session-local");
 
@@ -42,8 +43,9 @@ class Bot {
     );
 
     this.commands = [
+      new StartCommand(this.bot),
       new ScheduletCommand(this.bot, this.emitter),
-      new SpamCommand(this.bot)
+      new SpamCommand(this.bot),
     ];
 
     this.commands.forEach(command => command.handle())

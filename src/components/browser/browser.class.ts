@@ -1,5 +1,5 @@
 import puppetter from "puppeteer";
-import { Parser } from "../parser/parser";
+import { Parser } from "../parser/parser.class";
 import { EventEmitter } from "stream";
 
 export class Browser {

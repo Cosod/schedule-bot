@@ -71,7 +71,7 @@ export class ScheduletCommand extends Command {
   }
 
   handle(): void {
-    this.bot.start(async (ctx) => {
+    this.bot.hears("рас", async (ctx) => {
       try {
         if (ctx.message.chat.type !== 'group') {
           await ctx.deleteMessage(ctx.message.message_id);

@@ -66,7 +66,7 @@ class ScheduletCommand extends command_class_1.Command {
         }));
     }
     handle() {
-        this.bot.start((ctx) => __awaiter(this, void 0, void 0, function* () {
+        this.bot.hears("рас", (ctx) => __awaiter(this, void 0, void 0, function* () {
             try {
                 if (ctx.message.chat.type !== 'group') {
                     yield ctx.deleteMessage(ctx.message.message_id);
