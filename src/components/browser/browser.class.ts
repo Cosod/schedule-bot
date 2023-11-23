@@ -40,7 +40,7 @@ export class Browser {
   
         return content;
       } catch (err) {
-        return null;
+        return console.log(err);
       }
     })()
   }
