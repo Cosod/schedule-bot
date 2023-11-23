@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.ALL = exports.SATURDAY = exports.FRIDAY = exports.THURSDAY = exports.WEDNESDAY = exports.TUESDAY = exports.MONDAY = void 0;
+exports.MONDAY = "пн";
+exports.TUESDAY = "вт";
+exports.WEDNESDAY = "ср";
+exports.THURSDAY = "чт";
+exports.FRIDAY = "пт";
+exports.SATURDAY = "сб";
+exports.ALL = "все";

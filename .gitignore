@@ -1,4 +1,7 @@
-/dist
+/src
 .env
 /node_modules
-session.json
+sessions.json
+tslint.json
+.eslintrc.json
+README.md
