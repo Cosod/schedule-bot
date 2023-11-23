@@ -1,7 +1,8 @@
 /src
-.env
 /node_modules
-sessions.json
+.env
 tslint.json
+tsconfig.json
 .eslintrc.json
+packege-lock.json
 README.md
