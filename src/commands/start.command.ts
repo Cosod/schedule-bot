@@ -12,7 +12,6 @@ export class StartCommand extends Command {
 
   handle(): void {
     this.bot.start(async (ctx) => {
-      console.log(ctx);
       ctx.reply("Привет! чтобы узнать расписание напиши: рас")
     })
   }
