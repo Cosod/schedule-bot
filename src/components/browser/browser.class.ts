@@ -19,29 +19,28 @@ export class Browser {
     this.emitter.on('start', (ctx, type) => { this.getContent(ctx, type) });
   }
 
-  getContent(ctx: any, type: any) {
-    (async () => {
-      try {
-        const browser = await puppetter.launch({
-          headless: false,
-          ignoreHTTPSErrors: true
-        });
-    
-        const page = await browser.newPage();
-        await page.goto(this.url);
-    
-        await this.parser.start(page);
-        const content: string[][] | null = this.parser.content;
+  async getContent(ctx: any, type: any) {
+    try {
+      const browser = await puppetter.launch({
+        headless: false,
+        ignoreHTTPSErrors: true,
+        executablePath: '/usr/bin/chromium-browser',
+        args: ["--no-sandbox", "--disable-setuid-sandbox"]
+      });
   
-        this.emitter.emit('create-schedule', content, ctx, type);
-    
-        await page.close();
-        await browser.close();
+      const page = await browser.newPage();
+      await page.goto(this.url);
   
-        return content;
-      } catch (err) {
-        return console.log(err);
-      }
-    })()
+      await this.parser.start(page);
+      const content: string[][] | null = this.parser.content;
+      this.emitter.emit('create-schedule', content, ctx, type);
+  
+      await page.close();
+      await browser.close();
+
+      return content;
+    } catch (err) {
+      return console.log(err);
+    }
   }
 }

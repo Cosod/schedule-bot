@@ -18,7 +18,6 @@ class StartCommand extends command_class_1.Command {
     }
     handle() {
         this.bot.start((ctx) => __awaiter(this, void 0, void 0, function* () {
-            console.log(ctx);
             ctx.reply("Привет! чтобы узнать расписание напиши: рас");
         }));
     }

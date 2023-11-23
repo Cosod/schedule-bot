@@ -8,5 +8,5 @@ export declare class Browser {
     private emitter;
     constructor(url: string, parser: Parser, emitter: EventEmitter);
     prepare(): void;
-    getContent(ctx: any, type: any): void;
+    getContent(ctx: any, type: any): Promise<void | string[][] | null>;
 }

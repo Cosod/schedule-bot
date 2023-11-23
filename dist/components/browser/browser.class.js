@@ -23,11 +23,12 @@ class Browser {
         this.emitter.on('start', (ctx, type) => { this.getContent(ctx, type); });
     }
     getContent(ctx, type) {
-        (() => __awaiter(this, void 0, void 0, function* () {
+        return __awaiter(this, void 0, void 0, function* () {
             try {
                 const browser = yield puppeteer_1.default.launch({
                     headless: false,
-                    ignoreHTTPSErrors: true
+                    ignoreHTTPSErrors: true,
+                    executablePath: '/usr/bin/chromium-browser'
                 });
                 const page = yield browser.newPage();
                 yield page.goto(this.url);
@@ -39,9 +40,9 @@ class Browser {
                 return content;
             }
             catch (err) {
-                return null;
+                return console.log(err);
             }
-        }))();
+        });
     }
 }
 exports.Browser = Browser;
