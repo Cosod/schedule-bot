@@ -25,7 +25,7 @@ export class Browser {
         headless: false,
         ignoreHTTPSErrors: true,
         executablePath: '/usr/bin/chromium-browser',
-        args: ["--no-sandbox", "--disable-setuid-sandbox"]
+        args: ["--no-sandbox", "--disable-setuid-sandbox", "--enable-gpu"]
       });
   
       const page = await browser.newPage();
