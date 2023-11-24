@@ -23,9 +23,9 @@ export class Browser {
     try {
       const browser = await puppetter.launch({
         headless: false,
-        ignoreHTTPSErrors: true,
         executablePath: '/usr/bin/chromium-browser',
-        args: ["--no-sandbox", "--disable-setuid-sandbox", "--enable-gpu"]
+        args: ["--no-sandbox", "--disable-setuid-sandbox", "--enable-gpu"],
+        ignoreHTTPSErrors: true,
       });
   
       const page = await browser.newPage();
