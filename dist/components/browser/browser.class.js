@@ -32,6 +32,7 @@ class Browser {
                     ignoreHTTPSErrors: true,
                 });
                 const page = yield browser.newPage();
+                page.setDefaultNavigationTimeout(0);
                 yield page.goto(this.url);
                 yield this.parser.start(page);
                 const content = this.parser.content;
