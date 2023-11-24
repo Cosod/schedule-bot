@@ -28,7 +28,8 @@ class Browser {
                 const browser = yield puppeteer_1.default.launch({
                     headless: false,
                     ignoreHTTPSErrors: true,
-                    executablePath: '/usr/bin/chromium-browser'
+                    executablePath: '/usr/bin/chromium-browser',
+                    args: ["--no-sandbox", "--disable-setuid-sandbox", "--enable-gpu"]
                 });
                 const page = yield browser.newPage();
                 yield page.goto(this.url);
