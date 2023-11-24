@@ -1,1 +1,0 @@
-export const WAITMESSAGE = "погоди, пока идет загрузка с сайта"
