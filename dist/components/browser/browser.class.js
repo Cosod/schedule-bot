@@ -28,8 +28,8 @@ class Browser {
                 const browser = yield puppeteer_1.default.launch({
                     headless: "new",
                     executablePath: '/usr/bin/chromium-browser',
-                    args: ["--no-sandbox", "--disable-setuid-sandbox"],
                     ignoreHTTPSErrors: true,
+                    args: ["--no-sandbox"],
                 });
                 const page = yield browser.newPage();
                 page.setDefaultNavigationTimeout(0);
